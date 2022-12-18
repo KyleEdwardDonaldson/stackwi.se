@@ -4,7 +4,7 @@ export const getGlobalData = () => {
     : 'stackwi.se';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : 'Stackwi.se';
+    : 'stackwi.se';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : 'All rights reserved.';
