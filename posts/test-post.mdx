@@ -1,7 +1,18 @@
 ---
-title: Design critiques at Figma
-description: "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon."
-date: Jan 2 2021
+title: Forcing Users to Cyclically Change Their Password is Dangerous
+description: "Setting a security policy of periodic password changes is a sure way of making a hacker's job easier."
+date: December 18 2022
+tags: hidden
 ---
 
-This is an example post. There's another one [here](/posts/example-post).
+When I think about this topic I’m brought back to my time in school, in the computer rooms. Two weeks had passed since we last had to reset our password, as per the backwards policy of the apparent security experts my school had hired to manage their computers. My previous password of “Password1234” was no longer valid and I had to change it again. So I did what any sane person would do in this situation, the same thing I had done two weeks ago and what I would do two weeks from now, I added a number to make it “Password12345”.
+
+This brings me nicely to my first point on why forcing users to change their passwords periodically is a dangerous practice - it causes password fatigue. You force people to change their password and they, again, need to conjure up not only a complex password, but also one that they can remember. This is particularly tough in a setting where a user may not have access to a password manager, or may not have the foresight to use one.
+
+They’ll inevitably choose something easy to remember if they know they’re going to have to change it again in two weeks. And the future iterations of their passwords will likely vary only slightly from what they chose today, such as the technique my teenage self adopted of adding a number on.
+
+The idea behind a password change cycle is that it ensures that if a hacker gets access to a password, their ability to abuse their knowledge of that password is only for a certain period of time. However, I’d say it’s more likely that a hacker will guess, or brute force, a simple and temporary password, than for a hacker to get access to the complex password a user has had for six months. And with the rise of two factor authentication, there are an even smaller number of instances where getting access to a password can even cause any harm. 
+
+[Research has shown](https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2016/03/time-rethink-mandatory-password-changes) that the effectiveness of a password is not on how frequently it is changed, but on the complexity of the password. In fact, studies have shown that regularly changing passwords actually reduces security, because it encourages users to choose predictable patterns or variations of their previous passwords, as I did when I was forced to follow this policy in school.
+
+In conclusion, forcing users to periodically change their passwords causes them to choose simpler passwords and can actually have the opposite effect to what is desired when attempting to use this policy as a security method. Instead of forcing users to change their passwords, we should be spending our time implementing other security measures such as two-factor authentication, and encouraging the use of password managers.

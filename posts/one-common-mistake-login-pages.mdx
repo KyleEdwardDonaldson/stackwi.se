@@ -1,0 +1,42 @@
+---
+title: One Common Mistake Developers Make On Login Pages
+description: "Error messages on your login page need to be uninformative for the safety of the users."
+date: December 19 2022
+tags: software, security, login, developers
+---
+
+Providing helpful error messages to your users is a crucial part of a good user experience, and it can save your admins/support a lot of time too. It’s so much easier for everyone when a user can say, “I clicked this button, and it told me exactly why I couldn’t successfully complete the action.” 
+
+However, when it comes to the login form, or the registration form, or the Forgot Your Password form - things take a slightly different turn. Imagine a hacker is maliciously trying to find out the email address for one of your users, named Bob123. He knows the username, and guesses the email, as below:
+
+---
+
+_Forgot Your Password?_
+
+_Type your email address here_
+
+_Bob123@stackwi.se_
+
+_SUCCESS: A password reset link has been sent to your email_
+
+---
+
+Now he knows Bob123's email, and he can move along to the email provider to continue his attacks. Now consider security through obscurity:
+
+---
+
+_Forgot Your Password?_
+
+_Type your email address here_
+
+_Bob123@stackwi.se_
+
+_Thank you. If the corresponding email exists, you shall receive a password reset link._
+
+---
+
+"Security Through Obscurity" helps to prevent hackers gaining access to information they shouldn't otherwise have access to. And the same issue presents itself in the login form, where an error message may give away that a user exists but the password was incorrect.
+
+If a hacker is trying to get into your application, better that they have no knowledge of the user base. If they were attempting to brute force their way in, their attempts would be much easier if they had a list of users they had confirmed to exist.
+
+This is why it's crucial to never give away sensitive information in your error messages, even if you're attempting to give your users the best experience. There is a time and place for informative error messages.
