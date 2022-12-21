@@ -34,7 +34,7 @@ export const getPosts = () => {
     };
   });
 
-  posts = sortPostsByDate(posts);
+  posts = sortPostsByDate(posts.filter(post => !post.data.tags?.includes("hidden")));
 
   return posts;
 };
