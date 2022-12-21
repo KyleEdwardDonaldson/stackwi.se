@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { Favicon } from '../public/favicon.ico';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import {useEffect} from 'react';
 
 export default function SEO({ title, description }) {
   ReactGA.initialize('G-0PPVJCZWK1');
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   });
 
   return (
