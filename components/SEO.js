@@ -1,7 +1,15 @@
 import Head from 'next/head';
 import { Favicon } from '../public/favicon.ico';
+import TagManager from 'react-gtm-module'
 
 export default function SEO({ title, description }) {
+ 
+  const tagManagerArgs = {
+    gtmId: 'G-0PPVJCZWK1'
+  };
+ 
+  TagManager.initialize(tagManagerArgs)
+
   return (
     <Head>
       <title>{title}</title>
