@@ -1,0 +1,22 @@
+---
+title: Stop Manual Testing! 5 Reasons to Start Automated Testing
+description: "Too many people still rely on automated testing, even today. Here's why you need to dedicate the resources to building automated test suites."
+date: December 21 2022
+tags: software, testing, quality, developers, QA, automated, E2E, unit, integration, UI, manual
+---
+
+Even today I see too frequently software companies that are dependent on manual testing, especially when it comes to their front end development. Often I’ll hear the same reasons regarding why that’s the case: “We don’t have the time/resource to build test suites”, “The code isn’t built to be testable”, and then the bonus one to the code not being testable, “We can’t refactor code because it would be too great of a risk that we wouldn’t catch everything while manual testing.”
+
+It’s the age old story of building an MVP (Minimum Viable Product) and running with it from there. A fast-built project scales to the point that it finally needs tests and the team either: doesn’t allocate the resources to building proper automated test suites (E2E tests, ATs, unit/integration tests, etc), or it was coded so hastily that it would be too tough to test without needing a major refactor of the existing code (dependent on external sources, no dependency inversion, etc).
+
+The thing people need to realise is that they may need to dedicate time and resources now to automated testing, but the long term benefits will always outweigh that initial investment in the long run. People find it too easy to say, “We made this change, let’s just run the manual tests so we can get it into production,” instead of, “Let’s build it testable, then let’s write the automated tests to ensure it works perfectly, and we’ll integrate those tests into our pipeline”. Many fail to see the big picture and take the easy way to get something into production.
+
+So, with that being said, here are my five reasons why automated testing is crucial when developing software:
+
+1. It saves time. Automated tests are very quick. Even UI tests can run in a fraction of the time that a manual tester can read the instructions, click through the workflow and track the results. And as a project scales, this time gap between an automated test suite and a manual one is only going to grow.
+2. Increases accuracy. Automated tests can be run repeatedly and consistently, without the risk of human error (other than if the test is incorrect, but a good approval process should minimise that risk). Manual testers inevitably will make mistakes, they’re only human.
+3. Reduces costs! This is one that I always hear about when people say, “We can’t spare the resources”. How many hours of manual testing does your team do each year? Think of how many could be saved if you could automate that whole process.
+4. Improves software quality. Automated test suites are a source of truth for developers. If they’re working on a highly-used area of code, where they can’t risk making a mistake, having tests they can repeatedly run that can flag any changes in the logic is a huge benefit. This can improve the quality of the software, it lessens the risk for bugs significantly and saves time - no more manual testers raising a defect for something minor when it’s out of the developer’s hands and deep into the QA process.
+5. It facilitates continuous integration and delivery. This is especially the case with larger scale applications - where a good CI/CD pipeline is a necessity. The pipeline enables developers to quickly and consistently deliver software updates. By automating the testing process within this pipeline, it allows developers to quickly identify and fix issues, allowing them to deliver changes more frequently and with greater confidence.
+
+To conclude, even if you have to take that initial risk to build your software to be testable, or you need to invest resources into getting your test suites up and running, and you need more time to integrate them into your CI/CD pipeline - the long term benefit is huge. It’s especially important for larger scale projects, or projects that intend to scale rapidly. Your software is going to be more secure, your developers will produce work quicker and with more confidence, your test process is going to be more efficient and cost-effective. The main cost is the initial setup, but it’s far cheaper than employing ten manual testers for the next ten years.

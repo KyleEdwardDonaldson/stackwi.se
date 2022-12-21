@@ -7,7 +7,7 @@ export const getGlobalData = () => {
     : 'stackwi.se';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'All rights reserved.';
+    : 'Stackwise Ltd | All rights reserved.';
 
   return {
     name,
