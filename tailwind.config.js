@@ -6,4 +6,8 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   presets: [require('./utils/tailwind-preset')],
+  compilerOptions: {
+
+    jsx: "react-jsx",
+  }
 };
