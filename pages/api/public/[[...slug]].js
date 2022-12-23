@@ -1,5 +1,3 @@
-// pages/api/images/[name].js
-
 // Tell Next.js to pass in Node.js HTTP
 export const config = {
     api: { externalResolver: true }
