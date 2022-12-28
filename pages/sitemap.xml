@@ -10,13 +10,18 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://stackwi.se/posts/five-reasons-to-automate-testing</loc>
-    <lastmod>2022-12-22T16:56:10+00:00</lastmod>
+    <loc>https://stackwi.se/posts/why-automated-testing-future-qa</loc>
+    <lastmod>2022-12-28T18:06:10+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://stackwi.se/posts/one-common-mistake-login-pages</loc>
-    <lastmod>2022-12-22T16:56:10+00:00</lastmod>
+    <loc>https://stackwi.se/posts/role-of-discretion-in-login-errors</loc>
+    <lastmod>2022-12-28T18:06:10+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+    <url>
+    <loc>https://stackwi.se/posts/brain-machine-interfaces-leaders-comparison</loc>
+    <lastmod>2022-12-28T18:06:10+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
