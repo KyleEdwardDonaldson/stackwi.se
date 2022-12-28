@@ -13,7 +13,7 @@ export default function SEO({ title, description }) {
   return (
     <Head>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3384926302230176"
-        crossorigin="anonymous"></script>
+        crossOrigin="anonymous"></script>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
