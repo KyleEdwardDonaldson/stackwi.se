@@ -1,16 +1,16 @@
 ---
 // @ts-ignore
 import { Icon } from "astro-icon";
+import Link from "./ui/link.astro";
+import linkedIn from "assets/linkedin.jpg";
+import twitter from "assets/twitter.png";
+import instagram from "assets/instagram.png";
+
+import { Image } from '@astrojs/image/components';
 ---
 
-<div class="mt-24">
-  <h2 class="text-center text-slate-500">Works with your technologies</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <Icon class="h-8 md:h-12" name="simple-icons:react" />
-    <Icon class="h-8 md:h-12" name="simple-icons:svelte" />
-    <Icon class="h-8 md:h-14" name="simple-icons:tailwindcss" />
-    <Icon class="h-8 md:h-16" name="simple-icons:alpinedotjs" />
-    <Icon class="h-8 md:h-12" name="simple-icons:vercel" />
-    <Icon class="h-8 md:h-12" name="simple-icons:astro" />
-  </div>
+<div class="flex gap-8 md:gap-20 items-center justify-center flex-wrap mb-6">
+  <a href="https://www.linkedin.com/in/kyleedwarddonaldson/"><Image alt="LinkedIn" width={45} height={45} src={linkedIn} /></a>
+  <a href="https://www.instagram.com/kyleedwardd/"><Image alt="Instagram" width={45} height={45} src={instagram} /></a>
+  <a href="https://twitter.com/kyleedwardd"><Image alt="Twitter" width={45} height={45} src={twitter} /></a>
 </div>

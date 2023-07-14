@@ -1,8 +1,8 @@
 ---
 import { SEO } from "astro-seo";
+import "@fontsource/inter/variable.css";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource/inter/variable.css";
 
 export interface Props {
   title: string;
@@ -10,45 +10,62 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
+const path = Astro.url.pathname.replace(/\/$/, "");
+
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
+  path == "" ? "/home.png" : path + ".png",
+  Astro.site,
 ).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title
+  : "Stackwi.se";
+  
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" className="dark">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R67FR4NNBS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-R67FR4NNBS");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
-      title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      title={makeTitle + " - Stackwi.se"}
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@kyleedwardd",
+        site: "@kyleedwardd",
         card: "summary_large_image",
+        title: makeTitle,
+        image: resolvedImageWithDomain + "?1"
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: makeTitle,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Homepage Screenshot",
         },
       }}
     />

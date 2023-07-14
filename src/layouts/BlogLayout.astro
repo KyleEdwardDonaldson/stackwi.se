@@ -1,16 +1,16 @@
 ---
-import Container from "@components/container.astro";
+import Container from "../components/container.astro";
 import { getFormattedDate } from "@utils/all";
-import { log } from "astro/dist/core/logger/core";
 import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
+
 ---
 
 <Layout title={frontmatter.title}>
   <Container>
     <div class="mx-auto max-w-[735px] mt-14">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+      <span class="text-[#4fd6ec] uppercase tracking-wider text-sm font-medium">
         {frontmatter.category}
       </span>
       <h1
@@ -41,8 +41,8 @@ const { frontmatter } = Astro.props;
     </div>
     <div class="text-center mt-8">
       <a
-        href="/blog"
-        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        href="/"
+        class="text-[#ed7762] bg-[#c82c8d] px-5 py-3 rounded-md hover:text-[#4fd6ec] transition"
         >← Back to Blog</a
       >
     </div>
